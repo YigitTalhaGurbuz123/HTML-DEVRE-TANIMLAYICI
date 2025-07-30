@@ -1,6 +1,6 @@
 ## HTML ELEKTRONİK DEVRE TANIMLAMA SİTESİ:
 
-**Bu bot, size projelerininizi yaparken hangi devrenin ne olup olmadığını yada karıştırınca yapmanıza yardımcı olacak bir site**
+**Bu, size projelerininizi yaparken hangi devrenin ne olup olmadığını yada karıştırınca yapmanıza yardımcı olacak bir site**
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
 ![HTML](https://img.shields.io/badge/HTML5-e34c26?logo=html5&logoColor=white)
