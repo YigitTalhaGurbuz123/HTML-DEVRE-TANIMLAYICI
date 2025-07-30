@@ -18,3 +18,12 @@
 **Gereken Python Kütüphaneleri (PIP olarak)**
 1. pip install tensorflow==2.14.0
 2. pip install keras==2.14.0 (yüksek ihtimalle tensorflow ile beraber kurulacak ama yinede deneyin)
+3. pip install numpy==1.24.3
+4. pip install Pillow
+5. pip install Flask
+6. pip install flask-sqlalchemy
+
+### 3. 🛡️ Badge (rozet) ekleyip profesyonel görünüm:
+```markdown
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
