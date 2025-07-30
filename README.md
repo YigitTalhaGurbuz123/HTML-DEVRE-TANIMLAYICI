@@ -1,6 +1,15 @@
 ## HTML ELEKTRONİK DEVRE TANIMLAMA SİTESİ:
 
 **Bu bot, size projelerininizi yaparken hangi devrenin ne olup olmadığını yada karıştırınca yapmanıza yardımcı olacak bir site
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![HTML](https://img.shields.io/badge/HTML5-e34c26?logo=html5&logoColor=white)
+![Version](https://img.shields.io/badge/Version-1.0.0-blue)
+![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
+![Pip](https://img.shields.io/badge/pip-ready-blue?logo=pypi)
+![Made with ❤️](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)
+![Built by Yiğit Talha](https://img.shields.io/badge/Built%20by-Yiğit%20Talha-blueviolet)
+![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen)
+![KANKA POWER](https://img.shields.io/badge/KANKA--POWER-🔥🔥🔥-orange)
 
 ## Sitenin Özellikleri:
 1. Site, Python, Html, Css ile geliştirildi.
@@ -24,14 +33,3 @@
 6. pip install flask-sqlalchemy
 
 
-![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
-![HTML](https://img.shields.io/badge/HTML5-e34c26?logo=html5&logoColor=white)
-![Version](https://img.shields.io/badge/Version-1.0.0-blue)
-![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
-![Pip](https://img.shields.io/badge/pip-ready-blue?logo=pypi)
-![npm](https://img.shields.io/badge/npm-installed-red?logo=npm)
-![Requirements](https://img.shields.io/badge/requirements.txt-complete-blue)
-![Made with ❤️](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)
-![Built by Yiğit Talha](https://img.shields.io/badge/Built%20by-Yiğit%20Talha-blueviolet)
-![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen)
-![KANKA POWER](https://img.shields.io/badge/KANKA--POWER-🔥🔥🔥-orange)
