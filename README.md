@@ -11,6 +11,8 @@
 ![Built by Yiğit Talha](https://img.shields.io/badge/Built%20by-Yiğit%20Talha-blueviolet)
 ![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen)
 ![KANKA POWER](https://img.shields.io/badge/KANKA--POWER-🔥🔥🔥-orange)
+![Başlık](https://img.shields.io/badge/Flask-Python-redlogo=#3BABC3)
+
 
 ## Sitenin Özellikleri:
 1. Site, Python, Html, Css ile geliştirildi.
