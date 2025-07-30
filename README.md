@@ -23,7 +23,11 @@
 5. pip install Flask
 6. pip install flask-sqlalchemy
 
-### 3. 🛡️ Badge (rozet) ekleyip profesyonel görünüm:
-```markdown
+# Discord Image Classification Bot
+
 ![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![Platform](https://img.shields.io/badge/Platform-Discord-blue?logo=discord)
 ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+![Made With ❤️](https://img.shields.io/badge/Made%20with-❤️-ff69b4)
+
