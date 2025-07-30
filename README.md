@@ -23,19 +23,11 @@
 5. pip install Flask
 6. pip install flask-sqlalchemy
 
-# Discord Image Classification Bot
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
 ![HTML](https://img.shields.io/badge/HTML5-e34c26?logo=html5&logoColor=white)
-![Arduino](https://img.shields.io/badge/Arduino-00979D?logo=arduino&logoColor=white)
-![Windows](https://img.shields.io/badge/Platform-Windows-blue?logo=windows)
-![Discord](https://img.shields.io/badge/Discord-Bot-5865F2?logo=discord&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
-![Maintenance](https://img.shields.io/badge/Maintained-Yes-green)
 ![Version](https://img.shields.io/badge/Version-1.0.0-blue)
 ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Pip](https://img.shields.io/badge/pip-ready-blue?logo=pypi)
 ![npm](https://img.shields.io/badge/npm-installed-red?logo=npm)
 ![Requirements](https://img.shields.io/badge/requirements.txt-complete-blue)
