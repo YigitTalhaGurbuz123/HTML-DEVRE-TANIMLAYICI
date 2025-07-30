@@ -34,6 +34,4 @@
 ![Made with ❤️](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)
 ![Built by Yiğit Talha](https://img.shields.io/badge/Built%20by-Yiğit%20Talha-blueviolet)
 ![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen)
-![Tests](https://img.shields.io/badge/Tests-Passing-brightgreen)
-![Coverage](https://img.shields.io/badge/Coverage-90%25-yellowgreen)
 ![KANKA POWER](https://img.shields.io/badge/KANKA--POWER-🔥🔥🔥-orange)
