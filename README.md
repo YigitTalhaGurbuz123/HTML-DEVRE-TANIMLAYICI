@@ -14,8 +14,6 @@
 ![Flask](https://img.shields.io/badge/Flask-Web_App-000000?logo=flask)
 
 
-
-
 ## Sitenin Özellikleri:
 1. Site, Python, Html, Css ile geliştirildi.
 2. Site, xxx sınıftan oluşan ve Google Teachable Machine ile eğitilen bir görsel makina ile eğitildi.
@@ -37,4 +35,5 @@
 5. pip install Flask
 6. pip install flask-sqlalchemy
 
-
+## License
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
