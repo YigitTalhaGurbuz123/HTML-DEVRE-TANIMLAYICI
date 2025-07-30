@@ -16,7 +16,7 @@
 
 ## Sitenin Özellikleri:
 1. Site, Python, Html, Css ile geliştirildi.
-2. Site, xxx sınıftan oluşan ve Google Teachable Machine ile eğitilen bir görsel makina ile eğitildi.
+2. Site, 30 sınıftan oluşan ve Google Teachable Machine ile eğitilen bir görsel makine ile eğitildi.
 3. Site sizin devre elemanı arayarak onun özelliklerini, bağlantılarını ve varsa pin ve portlarını anlatma şansı sunuyor.
 4. Sitede Kayıt oluşturup ardından diğer kullanıcılarla sohbet edip sorularınızı onlarada sorabilirsiniz
 
