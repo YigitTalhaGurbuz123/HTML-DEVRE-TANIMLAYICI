@@ -29,7 +29,7 @@
 2- Visual Studio Code veya herhangi bir IDE  
 **Gereken Python Kütüphaneleri (PIP olarak)**
 1. pip install tensorflow==2.14.0
-2. pip install keras==2.14.0 (yüksek ihtimalle tensorflow ile beraber kurulacak ama yinede deneyin)
+2. pip install keras==2.14.0 (yüksek ihtimalle tensorflow ile beraber kurulacak ama yinede deneyin!)
 3. pip install numpy==1.24.3
 4. pip install Pillow
 5. pip install Flask
