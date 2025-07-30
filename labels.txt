@@ -1,0 +1,30 @@
+0 Arduino UNO
+1 Raspberry Pi
+2 Esp32
+3 Direnç
+4 Led
+5 Breadboard
+6 Transistör
+7 Entegre devre
+8 Motor sürücü
+9 Dc Motor
+10 Elektrolitik Kondansatör
+11 Seramik Kondansatör
+12 Servo Motor
+13 Ultrasonik Sensör
+14 OLED / TFT Ekran
+15 RTC Modülü (DS3231)
+16 Röle Modülü
+17 LDR 
+18 IR ALICI
+19 Potansiyometre
+20 Diyot
+21 Push Button
+22 Buzzer
+23 Breadboard Güç Kartı
+24 Step motor
+25 LCD ekran
+26 7 Segment Display
+27 PIR Sensör
+28 Raspberry Pi Pico
+29 Arduino Mega
