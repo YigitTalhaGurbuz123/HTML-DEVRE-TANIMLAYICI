@@ -12,7 +12,7 @@
 ![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen)
 ![KANKA POWER](https://img.shields.io/badge/KANKA--POWER-🔥🔥🔥-orange)
 ![Flask](https://img.shields.io/badge/Flask-Web_App-000000?logo=flask)
-![GRR](https://img.shields.io/badge/Flask-Web_App-000000?logo=snowflake)
+
 
 
 
