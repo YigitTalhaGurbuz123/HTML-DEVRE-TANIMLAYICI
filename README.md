@@ -19,6 +19,7 @@
 2. Site, 30 sınıftan oluşan ve Google Teachable Machine ile eğitilen bir görsel makine ile eğitildi.
 3. Site sizin devre elemanı arayarak onun özelliklerini, bağlantılarını ve varsa pin ve portlarını anlatma şansı sunuyor.
 4. Sitede Kayıt oluşturup ardından diğer kullanıcılarla sohbet edip sorularınızı onlarada sorabilirsiniz
+5. Ayrıca sitede kendi notlarınızı kaydedebilirsinz!
 
 ## Siteyi açmak için gerekenler:
 1.Bu siteye girip kayıt oluşturun ve kullanmaya başlayın!

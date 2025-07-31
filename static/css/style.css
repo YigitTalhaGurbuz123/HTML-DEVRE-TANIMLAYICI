@@ -6,3 +6,34 @@ body {
       text-align: center;
       padding: 30px;
     }
+
+html {
+  scroll-behavior:smooth
+}
+
+p {
+  color:black
+}
+
+button {
+  background-color: #1e90ff; /* Canlı mavi */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  margin: 5px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(30, 144, 255, 0.4);
+}
+
+button:hover {
+  background-color: #0c66d1; /* Daha koyu mavi */
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #084c9f;
+  transform: scale(0.98);
+}
