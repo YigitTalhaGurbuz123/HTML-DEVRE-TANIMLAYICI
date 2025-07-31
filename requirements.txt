@@ -1,0 +1,6 @@
+tensorflow==2.14.0
+install keras==2.14.0 (yüksek ihtimalle tensorflow ile beraber kurulacak ama yinede deneyin!)
+install numpy==1.24.3
+install Pillow
+install Flask
+install flask-sqlalchemy
