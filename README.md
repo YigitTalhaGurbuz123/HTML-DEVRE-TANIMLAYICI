@@ -22,12 +22,12 @@
 5. Ayrıca sitede kendi notlarınızı kaydedebilirsinz!
 
 ## Siteyi açmak için gerekenler:
-1.Bu siteye girip kayıt oluşturun ve kullanmaya başlayın!
+1. Bu siteye girip kayıt oluşturun ve kullanmaya başlayın!
 
 ## Eğer sitenin kodlarını canlı deneyimleyecekseniz:
 **Gereken Uygulamalar:**
-1- Python 3.10 (Çünkü tensorflow bir tek 3.10 da çalışıyor)
-2- Visual Studio Code veya herhangi bir IDE  
+1. Python 3.10 (Çünkü tensorflow bir tek 3.10 da çalışıyor)
+2. Visual Studio Code veya herhangi bir IDE  
 **Gereken Python Kütüphaneleri (PIP olarak)**
 1. pip install tensorflow==2.14.0
 2. pip install keras==2.14.0 (yüksek ihtimalle tensorflow ile beraber kurulacak ama yinede deneyin!)
@@ -35,6 +35,13 @@
 4. pip install Pillow
 5. pip install Flask
 6. pip install flask-sqlalchemy
-
+## Not
+**Normalde kodda şu anda VS Code nin Jinja kodlarını tanıyamadığı için HTML kodlarında bir hata var ama kod çalışıyor eğer kodu canlı**
+**Deneyecekseniz bu adımları yapın:**
+1. Vs code da uzantılar -> arama yeri ne "Jinja" yazın ve wholroyd yapım olanı indirin
+2. Html kodlarına gelin
+3. En aşağıdaki HTML yazan yere tıklayın
+4. Oradan Jinja yı seçin
+5. Artık hata gözükmeyecektir
 ## License
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
