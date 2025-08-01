@@ -35,7 +35,7 @@
 4. pip install Pillow
 5. pip install Flask
 6. pip install flask-sqlalchemy
-## Not
+
 **Normalde kodda şu anda VS Code nin Jinja kodlarını tanıyamadığı için HTML kodlarında bir hata var ama kod çalışıyor eğer kodu canlı**
 **Deneyecekseniz bu adımları yapın:**
 1. Vs code da uzantılar -> arama yeri ne "Jinja" yazın ve wholroyd yapım olanı indirin
