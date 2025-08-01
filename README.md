@@ -16,7 +16,7 @@
 
 ## Sitenin Özellikleri:
 1. Site, Python, Html, Css ile geliştirildi.
-2. Site, 30 sınıftan oluşan ve Google Teachable Machine ile eğitilen bir görsel makine ile eğitildi.
+2. Sitenin makine eğitme bölümü, 30 sınıftan oluşan ve Google Teachable Machine ile eğitilen bir görsel makine ile eğitildi.
 3. Site sizin devre elemanı arayarak onun özelliklerini, bağlantılarını ve varsa pin ve portlarını anlatma şansı sunuyor.
 4. Sitede Kayıt oluşturup ardından diğer kullanıcılarla sohbet edip sorularınızı onlarada sorabilirsiniz
 5. Ayrıca sitede kendi notlarınızı kaydedebilirsinz!
@@ -42,6 +42,8 @@
 2. Html kodlarına gelin
 3. En aşağıdaki HTML yazan yere tıklayın
 4. Oradan Jinja yı seçin
-5. Artık hata gözükmeyecektir
+5. Bunu templates deki her html dosyası için yapın
+6. Artık hata gözükmeyecektir
+
 ## License
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
