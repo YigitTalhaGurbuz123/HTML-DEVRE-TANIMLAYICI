@@ -36,14 +36,8 @@
 5. pip install Flask
 6. pip install flask-sqlalchemy
 
-**Normalde kodda şu anda VS Code nin Jinja kodlarını tanıyamadığı için HTML kodlarında bir hata var ama kod çalışıyor eğer kodu canlı**
-**Deneyecekseniz bu adımları yapın:**
-1. Vs code da uzantılar -> arama yeri ne "Jinja" yazın ve wholroyd yapım olanı indirin
-2. Html kodlarına gelin
-3. En aşağıdaki HTML yazan yere tıklayın
-4. Oradan Jinja yı seçin
-5. Bunu templates deki her html dosyası için yapın
-6. Artık hata gözükmeyecektir
+**Normalde kodda şu anda VS Code nin Jinja kodlarını tanıyamadığı için HTML kodlarında bir hata var ama kod çalışıyor**
+
 
 ## License
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
