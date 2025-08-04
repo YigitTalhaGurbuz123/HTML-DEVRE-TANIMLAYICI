@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, request, redirect, session, url_for
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -32,18 +32,21 @@ def home():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     error = ''
+    next_page = request.args.get('next')  # GET ile gelen next parametresi
+
     if request.method == 'POST':
         form_login = request.form['email']
         form_password = request.form['password']
+        next_page = request.form.get('next')  # POST ile gelen next parametresi
 
         user = User.query.filter_by(login=form_login, password=form_password).first()
         if user:
             session['user_id'] = user.id
-            return redirect('/')
+            return redirect(next_page or url_for('home'))
         else:
             error = 'Hatalı giriş veya şifre'
 
-    return render_template('login.html', error=error)
+    return render_template('login.html', error=error, next=next_page)
 
 # Kayıt sayfası
 @app.route('/reg', methods=['GET', 'POST'])
@@ -64,7 +67,7 @@ def reg():
 @app.route('/not_defteri')
 def not_defteri():
     if 'user_id' not in session:
-        return redirect('/login')
+        return redirect(url_for('login', next=request.path))
     
     user_id = session['user_id']
     cards = Card.query.filter_by(user_id=user_id).order_by(Card.id).all()
@@ -74,7 +77,7 @@ def not_defteri():
 @app.route('/card/<int:id>')
 def card(id):
     if 'user_id' not in session:
-        return redirect('/login')
+        return redirect(url_for('login', next=request.path))
 
     card = Card.query.get(id)
     if card and card.user_id == session['user_id']:
@@ -86,14 +89,14 @@ def card(id):
 @app.route('/create')
 def create():
     if 'user_id' not in session:
-        return redirect('/login')
+        return redirect(url_for('login', next=request.path))
     return render_template('create_card.html')
 
 # Yeni not ekleme formu (giriş zorunlu)
 @app.route('/form_create', methods=['GET', 'POST'])
 def form_create():
     if 'user_id' not in session:
-        return redirect('/login')
+        return redirect(url_for('login', next=request.path))
 
     if request.method == 'POST':
         title = request.form['title']
