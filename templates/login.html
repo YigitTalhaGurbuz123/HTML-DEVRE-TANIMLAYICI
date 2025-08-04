@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>programcının günlüğü</title>
+    <title>Giriş</title>
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
@@ -29,6 +29,7 @@
             <!--  -->
                 <button class="form__button">Giriş</button>
                 <a href="/reg" class="form__button reg__link">Kayıt</a>
+                <button type="button" onclick="window.location.href='{{ url_for('home') }}'">Ana Sayfaya dön</button>
         </form>
         {% endblock %}
       </main>

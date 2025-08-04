@@ -39,7 +39,7 @@ def login():
         user = User.query.filter_by(login=form_login, password=form_password).first()
         if user:
             session['user_id'] = user.id
-            return redirect('/not_defteri')
+            return redirect('/')
         else:
             error = 'Hatalı giriş veya şifre'
 
@@ -109,6 +109,13 @@ def form_create():
     else:
         return render_template('create_card.html')
 
+@app.route('/not_defteri2')
+def not_defteri2():
+    if 'user_id' in session:
+        return redirect('/not_defteri')
+    else:
+        return redirect('/login')
+    
 # Hakkında sayfası (1. proje)
 @app.route('/hakkinda')
 def hakkinda():
@@ -117,7 +124,7 @@ def hakkinda():
 # Henüz hazır olmayan diğer sayfalar için placeholder
 @app.route('/deneme')
 def deneme():
-    return "<h1>Henüz yapılmadı. Beklemede...</h1>"
+    return render_template('beklemede.html')
 
 # Logout
 @app.route('/logout')
