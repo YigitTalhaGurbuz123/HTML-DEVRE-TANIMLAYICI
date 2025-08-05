@@ -12,7 +12,7 @@
 ![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen)
 ![KANKA POWER](https://img.shields.io/badge/VsCode--POWER-🔥🔥🔥-orange)
 ![Flask](https://img.shields.io/badge/Flask-Web_App-000000?logo=flask)
-![CSS](https://img.shields.io/badge/Css-design-000000?logo=css)
+![CSS](https://img.shields.io/badge/Css-design-007bff?logo=css)
 
 ## Sitenin Özellikleri:
 1. Site, Python, Html, Css ile geliştirildi.
