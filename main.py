@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, redirect, session, url_for
+
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.secret_key = 'efsane-bir-gizli-anahtar'  # session için zorunlu
+app.secret_key = 'fa7b0c9416d3eab2c4f80b2197daeeaf'  # session için zorunlu
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///diary.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
