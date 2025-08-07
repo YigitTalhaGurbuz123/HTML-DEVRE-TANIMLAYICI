@@ -146,6 +146,10 @@ def forgot_password():
 def hakkinda():
     return render_template('hakkinda.html')
 
+@app.route('/devre_elemanlari')
+def devre_elemanlari():
+    return render_template('devre_elemanlari.html')
+
 # Henüz hazır olmayan diğer sayfalar için placeholder
 @app.route('/deneme')
 def deneme():
