@@ -63,6 +63,7 @@ def reg():
         return redirect('/login')
     else:
         return render_template('registration.html')
+    
 
 # Not defteri sayfası (giriş zorunlu)
 @app.route('/not_defteri')
@@ -120,6 +121,26 @@ def not_defteri2():
     else:
         return redirect('/login')
     
+@app.route('/forgot_password', methods=['GET', 'POST'])
+def forgot_password():
+    error = ''
+    success = ''
+
+    if request.method == 'POST':
+        email = request.form['email']
+        new_password = request.form['new_password']
+
+        user = User.query.filter_by(login=email).first()
+
+        if user:
+            user.password = new_password
+            db.session.commit()
+            success = 'Şifreniz başarıyla güncellendi. Giriş yapabilirsiniz.'
+        else:
+            error = 'Bu e-posta adresiyle kayıtlı bir kullanıcı bulunamadı.'
+
+    return render_template('forgot_password.html', error=error, success=success)
+
 # Hakkında sayfası (1. proje)
 @app.route('/hakkinda')
 def hakkinda():
