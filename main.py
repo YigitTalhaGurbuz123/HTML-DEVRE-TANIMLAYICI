@@ -1,8 +1,12 @@
 from flask import Flask, render_template, request, redirect, session, url_for
 
 from flask_sqlalchemy import SQLAlchemy
+from flask_socketio import SocketIO, send
+from datetime import datetime
+
 
 app = Flask(__name__)
+socketio = SocketIO(app)
 app.secret_key = 'fa7b0c9416d3eab2c4f80b2197daeeaf'  # session için zorunlu
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///diary.db'
@@ -23,6 +27,12 @@ class User(db.Model):
     login = db.Column(db.String(100), nullable=False)
     password = db.Column(db.String(30), nullable=False)
     cards = db.relationship('Card', backref='user', lazy=True)
+    
+class ChatMessage(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(100), nullable=False)
+    message = db.Column(db.Text, nullable=False)
+    timestamp = db.Column(db.String(50), nullable=False)
 
 # Ana sayfa - 1. projenin index.html (herkes erişebilir)
 @app.route('/')
@@ -145,6 +155,40 @@ def forgot_password():
 @app.route('/hakkinda')
 def hakkinda():
     return render_template('hakkinda.html')
+
+@app.route('/canli_sohbet')
+def canli_sohbet():
+    if 'user_id' not in session:
+        return redirect(url_for('login', next=request.path))
+    
+    user = User.query.get(session['user_id'])
+    if not user:  # Kullanıcı bulunamadıysa
+        session.clear()
+        return redirect(url_for('login', next=request.path))
+    
+    messages = ChatMessage.query.order_by(ChatMessage.id).all()
+    return render_template('canli_sohbet.html', username=user.login, messages=messages)
+
+@socketio.on('message')
+def handle_message(msg):
+    # msg -> "username: mesaj"
+    print(f"Gelen mesaj: {msg}")
+
+    # Mesajı ayırıp veritabanına kaydet
+    try:
+        username, text = msg.split(": ", 1)
+    except ValueError:
+        username, text = "Bilinmeyen", msg
+
+    new_msg = ChatMessage(
+        username=username,
+        message=text,
+        timestamp=datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    )
+    db.session.add(new_msg)
+    db.session.commit()
+
+    send(msg, broadcast=True)
 
 @app.route('/devre_elemanlari')
 def devre_elemanlari():

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Canlı Sohbet 💬</title>
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h2>Canlı Sohbet 💬</h2>
+    <div id="messages">
+        {% for m in messages %}
+            <div>{{ m.username }}: {{ m.message }} <small>({{ m.timestamp }})</small></div>
+        {% endfor %}
+    </div>
+    <input id="msg" type="text" placeholder="Mesaj yaz..." autofocus>
+    <button id="sendBtn">Gönder</button>
+
+    <script>
+        var socket = io();
+        var username = "{{ username }}";
+
+        socket.on('message', function(msg){
+            var messagesDiv = document.getElementById('messages');
+            var now = new Date();
+            var timeStr = now.toLocaleTimeString();
+            messagesDiv.innerHTML += "<div>" + msg + " <small>(" + timeStr + ")</small></div>";
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        });
+
+        document.getElementById('sendBtn').onclick = function(){
+            var text = document.getElementById('msg').value;
+            if (text.trim() !== "") {
+                socket.send(username + ": " + text);
+                document.getElementById('msg').value = "";
+            }
+        };
+
+        document.getElementById('msg').addEventListener("keypress", function(e){
+            if(e.key === "Enter"){
+                document.getElementById('sendBtn').click();
+            }
+        });
+    </script>
+    <button type="button" onclick="window.location.href='{{ url_for('home') }}'">Ana Sayfaya dön</button>
+</body>
+</html>
