@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Devre Elemanı Tanıma</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Devre Elemanı Tanıma</h1>
+        <form action="{{ url_for('devre_tanima') }}" method="POST" enctype="multipart/form-data">
+            <input type="file" id="fileInput" name="image" accept="image/*" style="display:none;" required />
+            <button type="button" onclick="document.getElementById('fileInput').click();">Dosya Seç</button>
+            <button type="submit">Tanımla</button>
+        </form>
+
+        {% if prediction %}
+            <div class="result">
+                Tanımlanan Devre Elemanı: <span style="color:green;">{{ prediction }}</span>
+                <ul>
+                    {% for sentence in description %}
+                        <li>{{ sentence }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% elif error %}
+            <div class="result" style="color:red;">
+                {{ error }}
+            </div>
+        {% endif %}
+    </div>
+    <button type="button" onclick="window.location.href='{{ url_for('home') }}'">Ana Sayfaya dön</button>
+</body>
+</html>

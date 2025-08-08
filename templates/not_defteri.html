@@ -25,6 +25,7 @@
   <main>
     {% block content %}
     <h1 class="main__title">Kayıtlarım</h1>
+    
     <ul class="cards-list">
       {% for el in cards %}
       <li class="card">
@@ -41,6 +42,7 @@
         <a class="creat__link" href="{{ url_for('create') }}"></a>
       </li>
     </ul>
+    <button type="button" onclick="window.location.href='{{ url_for('home') }}'">Ana Sayfaya dön</button>
     {% endblock %}
   </main>
 
