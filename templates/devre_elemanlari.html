@@ -1,10 +1,135 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>HTML DEVRE TANIMLAYICI!</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  </head>
-  <body>
-    <h1>DEVRE ELEMANLARI</h1>
-  </body>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Devre Elemanları </title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="item">
+      <img src="../static/img/arduino.png" alt="Arduino UNO" class="item__img" />
+      <p class="item__text">Arduino UNO, projelerde en çok tercih edilen mikrodenetleyici karttır. İçinde Atmega328 mikrodenetleyici bulunur. USB ile bilgisayara bağlanarak programlanır. Dijital ve analog pinleri sayesinde birçok sensör ve cihazı kontrol edebilir. Başlangıç için ideal, geniş topluluk ve kaynak desteği var.</p>
+    </div>
+    <div class="item reverse">
+      <img src="../static/img/raspberrypi.png" alt="Raspberry Pi" class="item__img" />
+      <p class="item__text">Raspberry Pi, kredi kartı boyutunda bir mini bilgisayardır. Üzerinde işlemci, RAM, USB portları ve HDMI çıkışı bulunur. Genellikle Linux işletim sistemiyle kullanılır ve masaüstü bilgisayar gibi çalışabilir. Görüntü işleme, medya oynatma ve IoT projeleri için çok uygundur. Programlama dilleri ve uygulamalar açısından çok esnektir.</p>
+    </div>
+    <div class="item">
+      <img src="../static/img/esp32.png" alt="ESP32" class="item__img" />
+      <p class="item__text">ESP32, WiFi ve Bluetooth özelliklerini bir arada sunan güçlü bir mikrodenetleyicidir. Düşük güç tüketimi ile IoT cihazlarında yaygın şekilde kullanılır. Çift çekirdekli işlemcisi ve bol sayıda giriş-çıkış pini vardır. Arduino IDE veya ESP-IDF ile programlanabilir. Kablosuz haberleşme projelerinde çok avantaj sağlar.</p>
+    </div>
+    <div class="item reverse">
+      <img src="../static/img/direnc.png" alt="Direnç" class="item__img" />
+      <p class="item__text">Direnç, elektrik akımını sınırlamak için kullanılır. Devrede akımı kontrol ederek elektronik bileşenleri korur. Farklı direnç değerleri (ohm cinsinden) vardır ve renk kodları ile tanımlanır. Dirençler seri veya paralel bağlanarak farklı devreler oluşturulur. Elektronik projelerde olmazsa olmaz temel parçalardandır.</p>
+    </div>
+    <div class="item">
+      <img src="../static/img/led.png" alt="LED" class="item__img" />
+      <p class="item__text">LED (Light Emitting Diode), elektrik enerjisini ışığa çeviren yarı iletken bir diyottur. Genellikle devrede göstergeler için kullanılır. Çok düşük güç tüketir ve uzun ömürlüdür. Renkleri kırmızı, yeşil, mavi gibi çeşitlidir. Doğru kutuplama yapılmazsa yanmaz veya zarar görebilir.</p>
+    </div>
+    <div class="item reverse">
+      <img src="../static/img/breadboard.png" alt="Breadboard" class="item__img" />
+      <p class="item__text">Breadboard, lehim yapmadan devre kurulmasını sağlar. Üzerinde birçok bağlantı noktası bulunur ve kablolarla kolayca devre oluşturulur. Prototipleme ve test aşamalarında çok kullanışlıdır. İçindeki bağlantılar belirli sıralarda kısa devre yapacak şekilde düzenlenmiştir. Devreyi hızlıca değiştirmek ve geliştirmek için ideal.</p>
+    </div>
+    <div class="item">
+      <img src="../static/img/transistor.png" alt="Transistör" class="item__img" />
+      <p class="item__text">Transistör, küçük akımlarla büyük akımları kontrol eden bir anahtardır. Aynı zamanda sinyalleri yükseltmek için de kullanılır. Bipolar veya MOSFET tipi olabilir. Üç bacağı vardır: emiter, base, collector (bipolar) veya source, gate, drain (MOSFET). Elektronik devrelerde anahtar veya amplifikatör görevi görür.</p>
+    </div>
+    <div class="item reverse">
+      <img src="../static/img/entegre.png" alt="Entegre Devre" class="item__img" />
+      <p class="item__text">Entegre devreler, birçok elektronik bileşeni tek bir yonga üzerinde toplar. Mantık kapıları, zamanlayıcılar veya mikrodenetleyiciler gibi çeşitleri vardır. Devre karmaşıklığını azaltır ve daha kompakt tasarım sağlar. Çeşitli paket tiplerinde bulunur, DIP ve SMD en yaygınlarıdır. Modern elektronik cihazların temel yapı taşıdır.</p>
+    </div>
+    <div class="item">
+      <img src="../static/img/dc_motor_surucu.png" alt="Motor Sürücü" class="item__img" />
+      <p class="item__text">Motor sürücü, mikrodenetleyiciden gelen düşük güçlü sinyalleri motorun çalışması için gereken yüksek akıma çevirir. DC motor veya step motor kontrolünde kullanılır. Genellikle H-köprüsü devresi içerir. Motorun yönü ve hızı sürücü üzerinden ayarlanabilir. Arduino gibi kartlarla motor kontrolü için olmazsa olmaz modüldür.</p>
+    </div>
+    <div class="item reverse">
+      <img src="../static/img/dc_motor.png" alt="DC Motor" class="item__img" />
+      <p class="item__text">DC motor, doğru akımla çalışan döner motorlardır. Elektrik enerjisini mekanik enerjiye çevirirler. Robotik ve hareketli projelerde yaygın olarak kullanılır. Hızı gerilim ile kontrol edilebilir. Basit yapısı sayesinde kolayca kontrol edilir ama yön değiştirmek için motor sürücü gerekir.</p>
+    </div>
+    <div class="item">
+      <img src="../static/img/elektrolitik _kondanstr.png" alt="Elektrolitik Kondansatör" class="item__img" />
+      <p class="item__text">Elektrolitik kondansatörler yüksek kapasiteli ve polariteli devre elemanlarıdır. Genellikle güç filtrelemede kullanılırlar. Doğru kutuplamaya dikkat edilmezse zarar görür veya patlayabilir. Boyutları diğer kondansatörlere göre büyüktür. Devrede ani gerilim değişimlerini yumuşatmak için idealdir.</p>
+    </div>
+    <div class="item reverse">
+      <img src="../static/img/seramik_kondansator.png" alt="Seramik Kondansatör" class="item__img" />
+      <p class="item__text">Seramik kondansatörler düşük kapasiteli, kararlı ve küçük kondansatörlerdir. Yüksek frekans devrelerinde tercih edilir. Polaritesi yoktur, yani kutuplarına dikkat edilmez. Ucuz ve dayanıklıdır. Genellikle sinyal filtreleme ve zamanlama devrelerinde kullanılır.</p>
+    </div>
+    <div class="item">
+      <img src="../static/img/servo.png" alt="Servo Motor" class="item__img" />
+      <p class="item__text">Servo motorlar, pozisyon kontrolü yapabilen özel motorlardır. İçinde küçük bir DC motor, dişli mekanizma ve geri besleme sistemi bulunur. 0-180 derece arasında hassas hareket sağlarlar. Robot kol, uzaktan kumandalı araç gibi uygulamalarda tercih edilir. Kontrol sinyali PWM ile yapılır.</p>
+    </div>
+    <div class="item reverse">
+      <img src="../static/img/ultrasonik.png" alt="Ultrasonik Sensör" class="item__img" />
+      <p class="item__text">Ultrasonik sensörler, ses dalgaları gönderip geri dönme süresine göre mesafe ölçerler. Engelleri algılamak için kullanılır. Genellikle iki parçadan oluşur: verici ve alıcı. Robotik ve otomasyon projelerinde sıkça yer alır. Mesafe ölçümü hassas ve kablosuzdan bağımsızdır.</p>
+    </div>
+    <div class="item">
+      <img src="../static/img/tft.png" alt="OLED / TFT Ekran" class="item__img" />
+      <p class="item__text">OLED ve TFT ekranlar, renkli ve yüksek çözünürlüklü küçük ekranlardır. Proje verilerini ve grafik arayüzleri göstermek için kullanılır. OLED, genellikle daha parlak ve düşük güç tüketir. TFT ise daha fazla renk derinliği ve geniş açı sunar. Arduino ve Raspberry Pi ile kolayca kullanılabilir.</p>
+    </div>
+    <div class="item reverse">
+      <img src="../static/img/rtc.png" alt="RTC Modülü (DS3231)" class="item__img" />
+      <p class="item__text">RTC (Real Time Clock) modülü gerçek zamanı takip eder. DS3231, yüksek hassasiyetli bir RTC entegresidir. Pil desteği sayesinde güç kesilse bile zamanı tutar. Saat ve tarih bilgisini mikrodenetleyicilere sağlar. Zaman tabanlı otomasyon projelerinde çok kullanışlıdır.</p>
+    </div>
+    <div class="item">
+      <img src="../static/img/role.png" alt="Röle Modülü" class="item__img" />
+      <p class="item__text">Röle modülü, düşük güçlü sinyallerle yüksek güçlü cihazları anahtarlar. Elektronik devreleri ev aletleri veya motorlar gibi cihazlara bağlamak için idealdir. Manyetik bobin ile çalışan elektromekanik bir anahtardır. İzolasyon sağlar, böylece devreyi korur. Arduino projelerinde sıklıkla tercih edilir.</p>
+    </div>
+    <div class="item reverse">
+      <img src="../static/img/ldr.png" alt="LDR" class="item__img" />
+      <p class="item__text">LDR (Light Dependent Resistor), ışık şiddetine bağlı olarak direnci değişen bir sensördür. Ortam ışığına göre devreyi tetiklemek için kullanılır. Gece/gündüz sensörü olarak popülerdir. Basit yapısı ve kolay kullanımı vardır. Sokak lambaları ve otomatik ışık kontrolü için uygundur.</p>
+    </div>
+    <div class="item">
+      <img src="../static/img/ır.png" alt="IR Alıcı" class="item__img" />
+      <p class="item__text">IR alıcı, kızılötesi ışınları algılayan sensördür. Uzaktan kumanda sinyallerini okumak için kullanılır. Modül halinde genellikle foto diyot veya fototransistör içerir. Arduino ile kolay entegrasyon sağlar. Ev otomasyonunda ve oyuncak kumandalarında yaygın.</p>
+    </div>
+    <div class="item reverse">
+      <img src="../static/img/pot.png" alt="Potansiyometre" class="item__img" />
+      <p class="item__text">Potansiyometre, ayarlanabilir dirençtir ve döndürülerek değeri değiştirilir. Ses seviyesi veya ışık şiddeti gibi ayar kontrolü için kullanılır. Üç bacağı vardır: iki uç direnç ve ortadaki kısım ayarlanabilir çıkıştır. Analog girişlerde ölçüm için idealdir. Çok çeşitli boyut ve değerlerde bulunur.</p>
+    </div>
+    <div class="item">
+      <img src="../static/img/diyot.png" alt="Diyot" class="item__img" />
+      <p class="item__text">Diyot, elektriği tek yönde ileten yarı iletkendir. Devrelerde akımın geri akışını önler. LED bir diyot türüdür ama genel diyot genellikle görünmez. Polaritesi önemlidir; yanlış bağlanırsa devre çalışmaz. Güç kaynaklarında, doğrultucu olarak kullanılır.</p>
+    </div>
+    <div class="item reverse">
+      <img src="../static/img/push.png" alt="Push Button" class="item__img" />
+      <p class="item__text">Push button, basınca duyarlı küçük anahtardır. Genellikle devreye kısa süreli sinyal vermek için kullanılır. Dijital girişlerde tıklama algılamak için uygundur. Mekanik yapısı basittir ve kolay kullanılır. Reset butonu veya kullanıcı girişleri için idealdir.</p>
+    </div>
+    <div class="item">
+      <img src="../static/img/buzzer.png" alt="Buzzer" class="item__img" />
+      <p class="item__text">Buzzer, elektronik ses üreteçtir. Uyarı, alarm veya bildirim sesi olarak kullanılır. Aktif ve pasif olmak üzere iki çeşidi vardır. Aktif buzzer sadece enerji verildiğinde ses çıkarır. Proje geri bildirimleri ve alarm sistemlerinde sık tercih edilir.</p>
+    </div>
+    <div class="item reverse">
+      <img src="../static/img/guc_karti.png" alt="Breadboard Güç Kartı" class="item__img" />
+      <p class="item__text">Breadboard güç kartı, breadboard’a 3.3V veya 5V sabit güç sağlar. USB’den veya adaptörden beslenebilir. Lehim yapmadan prototip devreler için elektrik kaynağıdır. Genellikle üzerinde açma-kapama düğmesi bulunur. Devre testi ve denemeleri kolaylaştırır.</p>
+    </div>
+    <div class="item">
+      <img src="../static/img/step.png" alt="Step Motor" class="item__img" />
+      <p class="item__text">Step motor, döner hareketi küçük adımlarla yapar. Her adımda belirli bir açı döner, bu sayede çok hassas kontrol sağlar. Robotik, CNC makineleri ve yazıcılar için idealdir. Doğrudan kontrol etmek zordur; sürücü gerektirir. Pozisyonlama işlerinde çok kullanılır.</p>
+    </div>
+    <div class="item reverse">
+      <img src="../static/img/lcd.png" alt="LCD Ekran" class="item__img" />
+      <p class="item__text">LCD ekranlar genellikle 16 karakter x 2 satır şeklinde olur. Projelerde veri ve mesaj göstermek için kullanılır. Arkadan aydınlatma ile gece de görülebilir. Arduino ile kolay kontrol edilir, hazır kütüphaneleri vardır. Basit kullanıcı arayüzleri için çok uygundur.</p>
+    </div>
+    <div class="item">
+      <img src="../static/img/7-segment.png" alt="7 Segment Display" class="item__img" />
+      <p class="item__text">7 segment display, rakamsal verileri göstermek için kullanılan LED dizisidir. 7 adet LED segmenti farklı kombinasyonlarda yanarak sayıları oluşturur. Saat ve sayaç projelerinde çok kullanılır. Anlaşılması kolaydır, kodlama basittir. Genellikle tek haneli sayı göstermek için idealdir.</p>
+    </div>
+    <div class="item reverse">
+      <img src="../static/img/pır.png" alt="PIR Sensör" class="item__img" />
+      <p class="item__text">PIR (Passive Infrared) sensör, hareket algılar. İnsan vücudundan yayılan kızılötesi ışını tespit eder. Güvenlik sistemlerinde ve otomatik ışıklandırmada kullanılır. Enerji tüketimi çok düşüktür. Montajı kolay ve güvenilir bir sensördür.</p>
+    </div>
+    <div class="item">
+      <img src="../static/img/pico.png" alt="Raspberry Pi Pico" class="item__img" />
+      <p class="item__text">Raspberry Pi Pico, mikrodenetleyici tabanlı küçük bir karttır. ARM Cortex-M0+ işlemci içerir. Arduino benzeri projelerde uygun, düşük güç tüketir. Programlama için MicroPython veya C/C++ kullanılır. Raspberry Pi ailesinin mikrodenetleyici versiyonudur.</p>
+    </div>
+    <div class="item reverse">
+      <img src="../static/img/mega.png" alt="Arduino Mega" class="item__img" />
+      <p class="item__text">Arduino Mega, UNO’ya göre çok daha fazla pin ve hafızaya sahip bir karttır. Büyük projeler ve çok sayıda sensör ile çalışmak için idealdir. Atmega2560 mikrodenetleyici kullanır. USB ile programlanır ve geniş kütüphane desteği vardır. Robotik ve otomasyon projelerinde tercih edilir.</p>
+    </div>
+  </div>
+  </div>
+  <button type="button" onclick="window.location.href='{{ url_for('home') }}'">Ana Sayfaya dön</button>
+</body>
 </html>

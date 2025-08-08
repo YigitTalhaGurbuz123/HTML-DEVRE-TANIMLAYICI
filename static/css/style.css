@@ -309,3 +309,55 @@ ul {
     right: 10px;
     z-index: 999; /* Diğer öğelerin üstünde dursun */
 }
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  background: rgba(30, 41, 59, 0.6); /* hafif şeffaf koyu arka plan, senin temasına uygun */
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  color: white; /* beyaz yazı */
+}
+
+.item__img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.item__text {
+  font-size: 16px;
+  margin-left: 20px;
+  color: white; /* yazı rengini beyaz yaptım, sen siyah demiştin ama tema koyu */
+}
+
+/* Ters yön (resim sağ, yazı sol) */
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.reverse .item__text {
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+/* Responsive (telefonlarda alt alta) */
+@media (max-width: 600px) {
+  .item, .reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+  .item__text, .reverse .item__text {
+    margin: 10px 0 0 0 !important;
+  }
+}
