@@ -23,7 +23,7 @@
 
 ## Siteyi açmak için gerekenler:
 1. Bu siteye girip kayıt oluşturun ve kullanmaya başlayın!
-
+2. Not: Eğer giriş yapmadıysanız, sohbet ve not defteri bölümlerinde sizden giriş yapmanızı isteyecektir.
 ## Eğer sitenin kodlarını canlı deneyimleyecekseniz:
 **Gereken Uygulamalar:**
 1. Python 3.10 (Çünkü tensorflow bir tek 3.10 da çalışıyor)
