@@ -433,6 +433,7 @@ def devre_tanima():
     prediction = None
     description = None
     error = None
+    filepath = None  # Dosya yolunu fonksiyon boyunca saklamak için
 
     if request.method == 'POST':
         if 'image' not in request.files:
@@ -454,12 +455,13 @@ def devre_tanima():
                 if prediction is None:
                     error = "Devre elemanı tanımlanamadı."
                 else:
-                    # Sınıf adı tahmin edilince açıklamaları alıyoruz:
-                    description = siniflar.get(prediction)
-                    if description is None:
-                        description = ["Açıklama bulunamadı."]  # fallback
+                    description = siniflar.get(prediction, ["Açıklama bulunamadı."])
             except Exception as e:
                 error = f"Model çalıştırılırken hata: {e}"
+            finally:
+                # Tahmin işlemi bitince dosyayı sil
+                if filepath and os.path.exists(filepath):
+                    os.remove(filepath)
 
     return render_template('devre_tanima.html', prediction=prediction, description=description, error=error)
 
