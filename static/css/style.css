@@ -28,6 +28,9 @@ button {
   box-shadow: 0 4px 6px rgba(30, 144, 255, 0.4);
 }
 
+span {
+    color:white
+}
 button:hover {
   background-color: #0c66d1; /* Daha koyu mavi */
   transform: scale(1.05);

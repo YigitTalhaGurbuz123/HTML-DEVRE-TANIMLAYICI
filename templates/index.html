@@ -6,12 +6,15 @@
   </head>
   <body>
     <ul class="main-list">
-      <li class="list__item">
-        <a href="/login">
-          <img src="../static/img/login.svg" alt="login" width="20" height="20">
-        </a>
-      </li>
-    </ul>
+    <li class="list__item">
+      <a href="/login">
+        <img src="../static/img/login.svg" alt="login" width="20" height="20">
+        {% if user_email %}
+          <span>{{ user_email }}</span>
+        {% endif %}
+      </a>
+    </li>
+  </ul>
     <img src="../static/img/arduino_logo.png" class="logo" width="150" height="150">
     <h1>Hoşgeldiniz!!</h1>
     <p>Bu site sayesinde Devreler elemanları hakkında yeterince bilgiye sahip olacaksınız 😎</p>

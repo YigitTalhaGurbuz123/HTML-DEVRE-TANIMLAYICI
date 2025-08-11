@@ -2,8 +2,8 @@ from flask import Flask, render_template, request, redirect, session, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_socketio import SocketIO, send
 from datetime import datetime
-import os
 from werkzeug.utils import secure_filename
+import os
 from get_class import get_class
 
 
@@ -253,26 +253,31 @@ class ChatMessage(db.Model):
 # Ana sayfa - 1. projenin index.html (herkes erişebilir)
 @app.route('/')
 def home():
-    return render_template('index.html')
+    user_email = None
+    if 'user_id' in session:
+        user = User.query.get(session['user_id'])
+        if user:
+            user_email = user.login  # login sütununda e-posta var
+    return render_template('index.html', user_email=user_email)
 
-# Login sayfası
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     error = ''
-    next_page = request.args.get('next')  # GET ile gelen next parametresi
+    next_page = request.args.get('next')
 
     if request.method == 'POST':
         form_login = request.form['email']
         form_password = request.form['password']
-        next_page = request.form.get('next')  # POST ile gelen next parametresi
+        next_page = request.form.get('next')
 
         user = User.query.filter_by(login=form_login, password=form_password).first()
         if user:
             session['user_id'] = user.id
-            return redirect(next_page or url_for('home'))
+            # Eğer next yoksa veya boşsa direkt home'a at
+            return redirect(next_page if next_page else url_for('home'))
         else:
             error = 'Hatalı giriş veya şifre'
-
+    
     return render_template('login.html', error=error, next=next_page)
 
 # Kayıt sayfası
@@ -447,7 +452,7 @@ def devre_tanima():
             try:
                 prediction = get_class(MODEL_PATH, LABELS_PATH, filepath)
                 if prediction is None:
-                    error = "Güven düşük, devre elemanı tanımlanamadı."
+                    error = "Devre elemanı tanımlanamadı."
                 else:
                     # Sınıf adı tahmin edilince açıklamaları alıyoruz:
                     description = siniflar.get(prediction)
