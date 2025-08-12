@@ -35,9 +35,11 @@
 4. pip install Pillow
 5. pip install Flask
 6. pip install flask-sqlalchemy
+7. pip install Werkzeug
+8. pip install Flask-SocketIO
 
 **Normalde kodda şu anda VS Code nin Jinja kodlarını tanıyamadığı için HTML kodlarında bir hata var ama kod çalışıyor**
 
-
+## Fotoğraflar:
 ## License
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
