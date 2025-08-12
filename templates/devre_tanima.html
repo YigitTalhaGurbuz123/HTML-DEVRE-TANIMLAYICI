@@ -29,6 +29,11 @@
             </div>
         {% endif %}
     </div>
+    {% if image_url %}
+        <div style="margin-top:20px;">
+            <img src="{{ image_url }}" alt="Yüklenen Görsel">
+        </div>
+    {% endif %}
     <button type="button" onclick="window.location.href='{{ url_for('home') }}'">Ana Sayfaya dön</button>
 </body>
 </html>

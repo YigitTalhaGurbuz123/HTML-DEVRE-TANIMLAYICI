@@ -6,5 +6,3 @@ Flask
 flask-sqlalchemy
 flask_socketio
 werkzeug
-eventlet
-gunicorn

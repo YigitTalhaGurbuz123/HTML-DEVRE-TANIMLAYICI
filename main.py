@@ -253,11 +253,18 @@ class ChatMessage(db.Model):
 # Ana sayfa - 1. projenin index.html (herkes erişebilir)
 @app.route('/')
 def home():
+    # Yüklü resim varsa sil
+    filename = session.pop('uploaded_image', None)
+    if filename:
+        path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        if os.path.exists(path):
+            os.remove(path)
+
     user_email = None
     if 'user_id' in session:
         user = User.query.get(session['user_id'])
         if user:
-            user_email = user.login  # login sütununda e-posta var
+            user_email = user.login
     return render_template('index.html', user_email=user_email)
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -422,18 +429,18 @@ def deneme():
 
 MODEL_PATH = r"C:\Kodlar\Kodland\PythonPro\Final_Projesi\HTML-DEVRE-TANIMLAYICI\keras_model.h5"
 LABELS_PATH = r"C:\Kodlar\Kodland\PythonPro\Final_Projesi\HTML-DEVRE-TANIMLAYICI\labels.txt"
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = os.path.join('static', 'uploads')
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
-
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
 
 @app.route('/devre_tanima', methods=['GET', 'POST'])
 def devre_tanima():
     prediction = None
     description = None
     error = None
-    filepath = None  # Dosya yolunu fonksiyon boyunca saklamak için
+    image_url = None
 
     if request.method == 'POST':
         if 'image' not in request.files:
@@ -450,6 +457,11 @@ def devre_tanima():
             filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(filepath)
 
+            # Session'a kaydet
+            session['uploaded_image'] = filename
+
+            image_url = url_for('static', filename=f'uploads/{filename}')
+
             try:
                 prediction = get_class(MODEL_PATH, LABELS_PATH, filepath)
                 if prediction is None:
@@ -458,18 +470,30 @@ def devre_tanima():
                     description = siniflar.get(prediction, ["Açıklama bulunamadı."])
             except Exception as e:
                 error = f"Model çalıştırılırken hata: {e}"
-            finally:
-                # Tahmin işlemi bitince dosyayı sil
-                if filepath and os.path.exists(filepath):
-                    os.remove(filepath)
 
-    return render_template('devre_tanima.html', prediction=prediction, description=description, error=error)
+    else:
+        # GET isteğinde session'dan varsa dosya url'si hazırla
+        filename = session.get('uploaded_image')
+        if filename:
+            image_url = url_for('static', filename=f'uploads/{filename}')
+
+    return render_template('devre_tanima.html',
+                           prediction=prediction,
+                           description=description,
+                           error=error,
+                           image_url=image_url)
 
 # Logout
 @app.route('/logout')
 def logout():
+    # Çıkış yapınca session'daki resmi ve dosyayı sil
+    filename = session.pop('uploaded_image', None)
+    if filename:
+        path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        if os.path.exists(path):
+            os.remove(path)
     session.clear()
-    return redirect('/')
+    return redirect(url_for('home'))
 
 if __name__ == "__main__":
     with app.app_context():
