@@ -40,7 +40,5 @@
 
 **Normalde kodda şu anda VS Code nin Jinja kodlarını tanıyamadığı için HTML kodlarında bir hata var ama kod çalışıyor**
 
-## Fotoğraflar:
-![Bot  Çalışması:](images/dc_motor.png)
 ## License
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
