@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTC Modülü (DS3231)</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <h1>RTC Modülü (DS3231)</h1>
+
+    <figure>
+        <img src="" alt="RTC Modülü Görseli" class="devre-resim">
+        <figcaption>Gerçek zamanlı saat modülü</figcaption>
+    </figure>
+    
+    <h2>Nedir?</h2>
+    <p>RTC (Real Time Clock) modülü gerçek zamanı takip eder. DS3231 yüksek hassasiyetli bir RTC entegresidir.</p>
+    <div class="not">
+        💡 <strong>Not:</strong> Pil desteği sayesinde güç kesilse bile zamanı korur.
+    </div>
+
+    <h3>Kullanım Alanları</h3>
+    <ul>
+        <li>Zaman tabanlı otomasyon projeleri</li>
+        <li>Programlanabilir alarm sistemleri</li>
+        <li>Veri kayıt zamanlaması</li>
+    </ul>
+
+    <button type="button" onclick="window.location.href='{{ url_for('home') }}'">Ana Sayfaya Dön</button>
+</body>
+</html>

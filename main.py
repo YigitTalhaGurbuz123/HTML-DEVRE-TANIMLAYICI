@@ -422,10 +422,125 @@ def handle_message(msg):
 def devre_elemanlari():
     return render_template('devre_elemanlari.html')
 
-# Henüz hazır olmayan diğer sayfalar için placeholder
-@app.route('/deneme')
-def deneme():
-    return render_template('beklemede.html')
+@app.route('/arduino')
+def arduino():
+    return render_template('arduino.html')
+
+@app.route('/raspberry_pi')
+def raspberry_pi():
+    return render_template('raspberry_pi.html')
+
+@app.route('/esp32')
+def esp32():
+    return render_template('esp32.html')
+
+@app.route('/direnc')
+def direnc():
+    return render_template('direnc.html')
+
+@app.route('/led')
+def led():
+    return render_template('led.html')
+
+@app.route('/breadboard')
+def breadboard():
+    return render_template('breadboard.html')
+
+@app.route('/transistor')
+def transistor():
+    return render_template('transistor.html')
+
+@app.route('/entegre')
+def entegre():
+    return render_template('entegre.html')
+
+@app.route('/motor_surucu')
+def motor_surucu():
+    return render_template('motor_surucu.html')
+
+@app.route('/dc_motor')
+def dc_motor():
+    return render_template('dc_motor.html')
+
+@app.route('/elektrolitik_kondansator')
+def elektrolitik_kondansator():
+    return render_template('elektrolitik_kondansator.html')
+
+@app.route('/seramik_kondansator')
+def seramik_kondansator():
+    return render_template('seramik_kondansator.html')
+
+@app.route('/servo')
+def servo():
+    return render_template('servo.html')
+
+@app.route('/ultrasonik')
+def ultrasonik():
+    return render_template('ultrasonik.html')
+
+@app.route('/tft')
+def tft():
+    return render_template('tft.html')
+
+@app.route('/rtc')
+def rtc():
+    return render_template('rtc.html')
+
+@app.route('/role')
+def role():
+    return render_template('role.html')
+
+@app.route('/ldr')
+def ldr():
+    return render_template('ldr.html')
+
+@app.route('/ir')
+def ir():
+    return render_template('ir.html')
+
+@app.route('/pot')
+def pot():
+    return render_template('pot.html')
+
+@app.route('/diyot')
+def diyot():
+    return render_template('diyot.html')
+
+@app.route('/push')
+def push():
+    return render_template('push.html')
+
+@app.route('/buzzer')
+def buzzer():
+    return render_template('buzzer.html')
+
+@app.route('/guc_karti')
+def guc_karti():
+    return render_template('guc_karti.html')
+
+@app.route('/step')
+def step():
+    return render_template('step.html')
+
+@app.route('/lcd')
+def lcd():
+    return render_template('lcd.html')
+
+@app.route('/7-segment')
+def segment7():
+    return render_template('7-segment.html')
+
+@app.route('/pir')
+def pir():
+    return render_template('pir.html')
+
+@app.route('/pico')
+def pico():
+    return render_template('pico.html')
+
+@app.route('/arduino_mega')
+def arduino_mega():
+    return render_template('arduino_mega.html')
 
 MODEL_PATH = r"C:\Kodlar\Kodland\PythonPro\Final_Projesi\HTML-DEVRE-TANIMLAYICI\keras_model.h5"
 LABELS_PATH = r"C:\Kodlar\Kodland\PythonPro\Final_Projesi\HTML-DEVRE-TANIMLAYICI\labels.txt"

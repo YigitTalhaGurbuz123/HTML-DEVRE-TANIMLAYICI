@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspberry Pi</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <h1>Raspberry Pi</h1>
+
+    <figure>
+        <img src="../static/img/RaspberryPi.png" alt="Raspberry Pi Görseli" class="devre-resim">
+        <figcaption>Raspberry Pi mini bilgisayar</figcaption>
+    </figure>
+    
+    <h2>Nedir?</h2>
+    <p>Raspberry Pi, kredi kartı boyutunda, düşük maliyetli bir mini bilgisayardır. Linux tabanlı işletim sistemleri çalıştırabilir ve hem yazılım hem donanım projelerinde kullanılır.</p>
+    <div class="not">
+        📌 <strong>Bilgi:</strong> Raspberry Pi 4 modeli 8 GB RAM’e kadar destek sunar.
+    </div>
+
+    <h3>Kullanım Alanları</h3>
+    <ul>
+        <li>Ev otomasyonu</li>
+        <li>Sunucu kurulumu</li>
+        <li>Robot projeleri</li>
+        <li>Programlama eğitimi</li>
+    </ul>
+
+    <h4>Teknik Özellikler</h4>
+    <ul>
+        <li>Broadcom işlemci</li>
+        <li>1-8 GB RAM seçenekleri</li>
+        <li>HDMI, USB, Ethernet bağlantıları</li>
+        <li>microSD kart depolama</li>
+    </ul>
+
+    <button type="button" onclick="window.location.href='{{ url_for('home') }}'">Ana Sayfaya Dön</button>
+</body>
+</html>

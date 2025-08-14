@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servo Motor</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <h1>Servo Motor</h1>
+
+    <figure>
+        <img src="" alt="Servo Motor Görseli" class="devre-resim">
+        <figcaption>Pozisyon kontrolü yapabilen özel motor</figcaption>
+    </figure>
+    
+    <h2>Nedir?</h2>
+    <p>Servo motorlar, pozisyon kontrolü yapabilen motorlardır. İçinde küçük bir DC motor, dişli mekanizma ve geri besleme sistemi bulunur.</p>
+    <div class="not">
+        💡 <strong>Not:</strong> 0-180 derece arası hassas hareket sağlar, PWM ile kontrol edilir.
+    </div>
+
+    <h3>Kullanım Alanları</h3>
+    <ul>
+        <li>Robot kol uygulamaları</li>
+        <li>Uzaktan kumandalı araçlar</li>
+        <li>Hassas pozisyon kontrolü gereken projeler</li>
+    </ul>
+
+    <button type="button" onclick="window.location.href='{{ url_for('home') }}'">Ana Sayfaya Dön</button>
+</body>
+</html>

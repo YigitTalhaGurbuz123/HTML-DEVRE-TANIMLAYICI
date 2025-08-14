@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC Motor</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <h1>DC Motor</h1>
+
+    <figure>
+        <img src="../static/img/dc_motor.png" alt="DC Motor Görseli" class="devre-resim">
+        <figcaption>Doğru akım motoru (DC Motor)</figcaption>
+    </figure>
+    
+    <h2>Nedir?</h2>
+    <p>DC motor, elektrik enerjisini mekanik enerjiye dönüştüren bir motor türüdür. Yön ve hız kontrolü kolaydır.</p>
+    <div class="not">
+        💡 <strong>Not:</strong> Hız kontrolü PWM sinyali ile yapılabilir.
+    </div>
+
+    <h3>Kullanım Alanları</h3>
+    <ul>
+        <li>Robot projeleri</li>
+        <li>Fan ve pompalar</li>
+        <li>Elektrikli araçlar</li>
+        <li>Otomasyon sistemleri</li>
+    </ul>
+
+    <h4>Teknik Özellikler</h4>
+    <ul>
+        <li>Çalışma voltajı</li>
+        <li>Nominal akım</li>
+        <li>RPM (devir/dakika)</li>
+    </ul>
+
+    <button type="button" onclick="window.location.href='{{ url_for('home') }}'">Ana Sayfaya Dön</button>
+</body>
+</html>

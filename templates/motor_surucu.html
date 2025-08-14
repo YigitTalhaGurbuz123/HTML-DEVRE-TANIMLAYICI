@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Sürücü</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <h1>Motor Sürücü (L298N)</h1>
+
+    <figure>
+        <img src="../static/img/dc_motor_surucu.png" alt="Motor Sürücü Görseli" class="devre-resim">
+        <figcaption>DC motor kontrolü için kullanılan sürücü</figcaption>
+    </figure>
+    
+    <h2>Nedir?</h2>
+    <p>Motor sürücü, mikrodenetleyici ile motor arasında köprü görevi görerek motoru doğru yön ve hızda çalıştırmayı sağlar.</p>
+    <div class="not">
+        🔧 <strong>İpucu:</strong> L298N gibi çift motor sürücüler 2 motoru aynı anda kontrol edebilir.
+    </div>
+
+    <h3>Kullanım Alanları</h3>
+    <ul>
+        <li>Robot projeleri</li>
+        <li>Servo ve step motor kontrolü</li>
+        <li>Akıllı araçlar</li>
+    </ul>
+
+    <h4>Teknik Özellikler</h4>
+    <ul>
+        <li>Maksimum voltaj</li>
+        <li>Motor başına akım limiti</li>
+        <li>H köprüsü devre yapısı</li>
+    </ul>
+
+    <button type="button" onclick="window.location.href='{{ url_for('home') }}'">Ana Sayfaya Dön</button>
+</body>
+</html>
