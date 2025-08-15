@@ -538,10 +538,14 @@ def pir():
 def pico():
     return render_template('pico.html')
 
-@app.route('/arduino_mega')
+@app.route('/mega')
 def arduino_mega():
     return render_template('arduino_mega.html')
 
+@app.route('/github')
+def github():
+    return redirect("https://github.com/YigitTalhaGurbuz123/HTML-DEVRE-TANIMLAYICI.git")
+    
 MODEL_PATH = r"C:\Kodlar\Kodland\PythonPro\Final_Projesi\HTML-DEVRE-TANIMLAYICI\keras_model.h5"
 LABELS_PATH = r"C:\Kodlar\Kodland\PythonPro\Final_Projesi\HTML-DEVRE-TANIMLAYICI\labels.txt"
 UPLOAD_FOLDER = os.path.join('static', 'uploads')
